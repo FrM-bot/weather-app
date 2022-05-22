@@ -1,0 +1,33 @@
+.input {
+    resize: none;
+    font-size: 2rem;
+    outline: none;
+    display: flex;
+    align-items: center;
+    border: none;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: 0.3s;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    color: var(--primary);
+    border: 0.3rem transparent solid;
+    border-radius: var(--border-radius-1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    border: none;
+    border-bottom: var(--border);
+    width: 100%;
+}
+
+.input:hover, .textarea:hover {
+    box-shadow: transparent;
+}
+.input:focus, .textarea:focus {
+    /* border: var(--border); */
+    transition: .3s;
+    box-shadow: 0 10px 10px -10px transparent;
+    transform: translateY(5px);
+}

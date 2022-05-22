@@ -1,0 +1,44 @@
+@import url('/src/styles/styles.css');
+.container {
+  max-width: 80vw;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0;
+
+}
+
+.md-show {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    max-width: 90vw;
+    width: 100%;
+    padding: auto 2rem;
+  }
+  .md-col {
+    flex-direction: column;
+  }
+  .md-space-between {
+    justify-content: space-between;
+  }
+  .md-none {
+    display: none;
+  }
+  .md-show {
+    display: flex;
+  }
+  .md-flex-1 {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sm-center {
+    justify-content: center;
+  }
+  .app-title {
+    display: none;
+  }
+}

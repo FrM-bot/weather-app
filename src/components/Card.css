@@ -1,0 +1,12 @@
+.close-btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 5;
+}
+.card:first-child {
+    border-radius: var(--border-radius-1);
+}
+.card:last-child {
+    border-radius: var(--border-radius-3);
+}

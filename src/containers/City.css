@@ -1,0 +1,12 @@
+.info {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+}
+
+.info > p {
+    text-align: center;
+}
+
+.max-w-50vh {
+    max-width: 50vh;
+}

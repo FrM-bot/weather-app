@@ -1,0 +1,31 @@
+.button {
+  border-radius: var(--border-radius-2);
+  transition: all var(--transition) cubic-bezier(0.77, 0, 0.175, 1);
+  padding: 1rem 1.5rem;
+  color: var(--primary);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-bottom: var(--border-transparent);
+  border-top: var(--border-transparent);
+  background-color: var(--tertiary);
+  border: 2px var(--primary) solid;
+  text-align: center;
+}
+
+.button:hover {
+  transition-delay: var(--transition);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: translateY(5px);
+  background-color: var(--primary);
+  color: var(--bg-color);
+}
+.flexible > .button {
+  background-color: var(--bg-color);
+  color: var(--primary);
+}

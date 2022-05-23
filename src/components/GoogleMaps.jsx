@@ -33,7 +33,7 @@ function MyMapComponent ({ center, zoom }) {
     }
   }, [ref])
 
-  return <div ref={ref} id="map" style={{ width: '100%', height: '600px', borderRadius: '1rem' }} />
+  return <div ref={ref} id="map" style={{ width: '100%', height: '700px', borderRadius: '1rem' }} />
 }
 
 export default GoogleMapsComponent

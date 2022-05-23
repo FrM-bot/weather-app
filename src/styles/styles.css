@@ -146,6 +146,16 @@
   border-color: transparent;
   animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, spinner-fade 1.2s linear infinite;
 }
+.grid-c2-responsive-md {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 880px) {
+  .grid-c2-responsive-md {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .spinner:before {
   border-top-color: var(--primary);

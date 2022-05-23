@@ -30,7 +30,7 @@ const City = ({ city }) => {
           Back
         </Button>
       </Link>
-      <div className="my-4 max-w-50vh">
+      <div className="grid-c2-responsive-md gap-2 my-4">
         <div className='card'>
           <div className='flex col align-x gap-4'>
             <h2 className='p-2'>{cityPage.name}</h2>

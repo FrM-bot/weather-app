@@ -5,7 +5,7 @@ export const GET_CITY = async ({ name, id }) => {
     const queryBy = name ?? id
     const query = name ? 'q' : 'id'
 
-    const url = `http://api.openweathermap.org/data/2.5/weather?${query}=${queryBy}&appid=${apiKey}&units=metric`
+    const url = `https://api.openweathermap.org/data/2.5/weather?${query}=${queryBy}&appid=${apiKey}&units=metric`
     const res = await fetch(url)
     const resJSON = await res.json()
 

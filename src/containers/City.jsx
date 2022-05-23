@@ -8,11 +8,9 @@ import './City.css'
 const City = ({ city }) => {
   const { id } = useParams()
   const [cityPage, setCityPage] = useState()
-  console.log({ id })
   useEffect(() => {
     if (!city) {
       GET_CITY({ id }).then((res) => {
-        console.log(res)
         setCityPage(res)
       }).catch(alert)
     }

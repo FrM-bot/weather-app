@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom'
 
 import SvgCross from './icons/cross'
 
-const Card = ({ id, max, min, name, img, onClose }) => {
+const Card = ({ id, tempMin, tempMax, name, img, onClose }) => {
   return (
-    <div className='relative flexible'>
+    <div className='relative'>
 
-        <Button onClick={onClose} styles='close-btn center'>
+        <Button styles='close-btn center' role='close-card' onClick={onClose}>
           <SvgCross />
         </Button>
         <Link to={`/city/${id}`}>
@@ -27,7 +27,7 @@ const Card = ({ id, max, min, name, img, onClose }) => {
             </span>
 
             <span>
-              {min}
+              {tempMin}
             </span>
           </div>
 
@@ -37,16 +37,16 @@ const Card = ({ id, max, min, name, img, onClose }) => {
             </span>
 
             <span>
-              {max}
+              {tempMax}
             </span>
           </div>
           <div>
-            <img className='img' src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="icon" />
+            <img className='img' src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt={img} />
           </div>
           </div>
         </div>
-    </Link>
-      </div>
+      </Link>
+    </div>
   )
 }
 

@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Button from '../components/Button'
 import GoogleMaps from '../components/GoogleMaps'
-import { GET_CITY } from '../services/GET_CITY'
+import { CityContext } from '../context/city.context'
+import { GET_CITY } from '../services/GET_CITY.js'
 import './City.css'
 
-const City = ({ city }) => {
+const City = () => {
+  const { city } = useContext(CityContext)
   const { id } = useParams()
   const [cityPage, setCityPage] = useState()
+
   useEffect(() => {
     if (!city) {
       GET_CITY({ id }).then((res) => {

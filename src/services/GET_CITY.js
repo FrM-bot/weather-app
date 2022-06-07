@@ -1,4 +1,3 @@
-
 export const GET_CITY = async ({ name, id }) => {
   try {
     const apiKey = import.meta.env.VITE_API_KEY

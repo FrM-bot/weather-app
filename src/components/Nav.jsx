@@ -3,7 +3,7 @@ import SearchBar from './SearchBar.jsx'
 import { Link } from 'react-router-dom'
 import AboutButton from './AboutButton.jsx'
 
-const Nav = ({ setCities, cities }) => {
+const Nav = () => {
   return (
         <header className='card flex space-between align-x sm-center gap-4'>
                 <h1 className='app-title'>
@@ -12,10 +12,7 @@ const Nav = ({ setCities, cities }) => {
             </Link>
                 </h1>
             <div className='flex gap-2 align-x md-space-between'>
-                <SearchBar
-                    onSearch={(newCity) => setCities([...cities, newCity])}
-                    cities={cities}
-                    />
+                <SearchBar />
                 <div className='md-none'>
                     <AboutButton />
                 </div>

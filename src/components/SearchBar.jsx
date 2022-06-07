@@ -1,16 +1,17 @@
-import React from 'react'
-import { GET_CITY } from '../services/GET_CITY'
+import React, { useContext } from 'react'
+import { GET_CITY } from '../services/GET_CITY.js'
 import Button from './Button'
 import './SearchBar.css'
+import { CityContext } from '../context/city.context'
 
-const SearchBar = ({ onSearch, cities }) => {
+const SearchBar = () => {
+  const { cities, setCities } = useContext(CityContext)
   const handlerSubmit = (e) => {
     e.preventDefault()
 
     const name = e.target.elements.city.value
 
     if (!name) return alert('Ingresa una ciudad')
-
     GET_CITY({ name })
       .then((response) => {
         if (response?.error) return alert(response.error)
@@ -19,7 +20,7 @@ const SearchBar = ({ onSearch, cities }) => {
 
         if (indexCity > -1) return alert('Esta ciudad ya fue agragada...')
 
-        onSearch(response)
+        setCities([...cities, response])
 
         e.target.elements.city.value = ''
       }).catch(alert)
@@ -28,7 +29,7 @@ const SearchBar = ({ onSearch, cities }) => {
   return (
     <form onSubmit={handlerSubmit}>
       <div className='flex gap-2 align-x'>
-        <input name='city' type="text" placeholder="Ciudad..." className='input' />
+        <input name='city' type="text" placeholder="Ingresa una ciudad..." className='input' />
         <Button type='submit' >Add</Button>
       </div>
     </form>
